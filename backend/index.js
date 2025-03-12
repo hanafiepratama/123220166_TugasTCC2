@@ -14,9 +14,7 @@ const initializeDB = async () => {
         await db.authenticate();
         console.log('Database connected...');
         
-        // Sync all models with database
-        // Note: { force: true } will drop tables if they exist
-        // Use only in development
+      
         await db.sync();
     } catch (error) {
         console.error('Connection error:', error);
@@ -25,4 +23,4 @@ const initializeDB = async () => {
 
 initializeDB();
  
-app.listen(5000, ()=> console.log('Server up and running...'));
+app.listen(5000, ()=> console.log('Server Berjalan...'));
