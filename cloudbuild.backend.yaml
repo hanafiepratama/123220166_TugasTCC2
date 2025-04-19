@@ -1,10 +1,10 @@
 steps:
   - name: "gcr.io/cloud-builders/docker"
-    args: ["build", "-t", "gcr.io/$PROJECT_ID/be-notes166", "."]
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/benotes166", "."]
     dir: 'backend'
 
   - name: "gcr.io/cloud-builders/docker"
-    args: ["push", "gcr.io/$PROJECT_ID/be-notes166"]
+    args: ["push", "gcr.io/$PROJECT_ID/benotes166"]
 
   - name: "gcr.io/cloud-builders/gcloud"
     args:
@@ -13,7 +13,7 @@ steps:
         "deploy",
         "be",
         "--image",
-        "gcr.io/$PROJECT_ID/be-notes166",
+        "gcr.io/$PROJECT_ID/benotes166",
         "--timeout",
         "1000s",
         "--port",
