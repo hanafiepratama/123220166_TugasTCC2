@@ -1,6 +1,6 @@
 import {Sequelize} from "sequelize";
  
-const db = new Sequelize('notesapp_166','root','',{
+const db = new Sequelize('tcc_note','root','',{
     host: '35.224.173.168',
     dialect: 'mysql'
 });
