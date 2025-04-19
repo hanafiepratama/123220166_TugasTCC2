@@ -7,4 +7,6 @@ app.use(cors());
 app.use(express.json());
 app.use(notesRouter);
 
-app.listen(5000, () => console.log("Server Berjalan"));
+// Gunakan PORT dari environment variable
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server Berjalan di Port ${PORT}`));
